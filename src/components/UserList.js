@@ -45,6 +45,12 @@ export default function UserList({ users, setUsers, columns }) {
     }
   };
 
+  if (!columns || !Object.values(columns).includes(true)) {
+    return (
+      <div className="text-center py-4 text-gray-500">No columns selected.</div>
+    );
+  }
+
   return (
     <table className="w-full border border-gray-200 rounded-lg shadow-sm">
       <thead className="bg-gray-100">
