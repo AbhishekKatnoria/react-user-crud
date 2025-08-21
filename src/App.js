@@ -26,7 +26,7 @@ function App() {
         <ColumnDropdown columns={columns} setColumns={setColumns} />
         <AddUser setUsers={setUsers} />
       </div>
-      <UserList users={users} setUsers={setUsers} />
+      <UserList users={users} setUsers={setUsers} columns={columns} />
     </div>
   );
 }

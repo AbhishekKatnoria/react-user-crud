@@ -23,7 +23,7 @@ export default function ColumnDropdown({ columns, setColumns }) {
       {open && (
         <div className="absolute z-10 mt-2 w-48 bg-white divide-y divide-gray-100 rounded-lg shadow-sm">
           <ul className="p-3 space-y-3 text-sm text-gray-700">
-            {Object.keys(columns).map((col) => (
+            {Object.keys(columns)?.map((col) => (
               <li key={col}>
                 <div className="flex items-center">
                   <input
