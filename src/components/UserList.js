@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { MdOutlineEdit, MdDelete, MdCheck, MdClose } from "react-icons/md";
+import { FaRegEdit } from "react-icons/fa";
+import { MdDelete, MdCheck, MdClose } from "react-icons/md";
 
 export default function UserList({ users, setUsers }) {
   const [editId, setEditId] = useState(null);
@@ -106,7 +107,7 @@ export default function UserList({ users, setUsers }) {
                 </>
               ) : (
                 <>
-                  <MdOutlineEdit
+                  <FaRegEdit
                     fontSize={20}
                     className="text-blue-600 hover:text-blue-800 cursor-pointer"
                     onClick={() => handleAction("edit", u)}
