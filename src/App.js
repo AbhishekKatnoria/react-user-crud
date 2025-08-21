@@ -1,8 +1,25 @@
+// App.jsx
+import { useEffect, useState } from "react";
+import AddUser from "./components/AddUser";
+import UserList from "./components/UserList";
+
 function App() {
+  const [users, setUsers] = useState(() => {
+    return JSON.parse(localStorage.getItem("users")) || [];
+  });
+
+  // Sync localStorage automatically
+  useEffect(() => {
+    localStorage.setItem("users", JSON.stringify(users));
+  }, [users]);
+
+  console.log(users);
+
   return (
-    <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
-      React
-    </div>
+    <>
+      <AddUser setUsers={setUsers} />
+      <UserList users={users} setUsers={setUsers} />
+    </>
   );
 }
 
