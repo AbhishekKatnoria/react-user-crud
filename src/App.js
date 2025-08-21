@@ -1,4 +1,3 @@
-// App.jsx
 import { useEffect, useState } from "react";
 import AddUser from "./components/AddUser";
 import UserList from "./components/UserList";
@@ -13,13 +12,11 @@ function App() {
     localStorage.setItem("users", JSON.stringify(users));
   }, [users]);
 
-  console.log(users);
-
   return (
-    <>
+    <div className="mx-5">
       <AddUser setUsers={setUsers} />
       <UserList users={users} setUsers={setUsers} />
-    </>
+    </div>
   );
 }
 
