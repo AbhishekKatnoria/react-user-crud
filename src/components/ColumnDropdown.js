@@ -31,7 +31,7 @@ export default function ColumnDropdown({ columns, setColumns }) {
                     id={col}
                     checked={columns[col]}
                     onChange={() => handleCheckboxChange(col)}
-                    className="w-4 h-4 text-blue-600 border-gray-300 rounded-sm focus:ring-blue-500 focus:ring-2"
+                    className="w-4 h-4 text-blue-600"
                   />
                   <label htmlFor={col} className="ms-2 text-sm font-medium">
                     {col}
