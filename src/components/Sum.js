@@ -1,11 +1,10 @@
-import React from "react";
 
 function Sum({ val, onClick }) {
   function handleAdd() {
     onClick(val + 1);
   }
   function handleSub() {
-    onClick(val + 1);
+    onClick(val - 1);
   }
 
   return (
